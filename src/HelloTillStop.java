@@ -15,7 +15,7 @@ public class HelloTillStop {
         choice = sc.next();
         while ("h".equals(choice)) {
             System.out.println("Hello");
-            choice = sc.next();
+            choice = sc.next();//print hello everytime you type h
         }
     }
 }

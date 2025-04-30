@@ -5,6 +5,6 @@ public class Message {
     }
 
     public static void main(String[] args) {
-        new Message().message();  // removed extra '('
+        new Message().message();
     }
 }
