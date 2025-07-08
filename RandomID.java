@@ -1,40 +1,38 @@
-import java.util.Arrays;
-
-import java.util.Collections;
-
-import java.util.List;
+import java.util.Random;
 
 
 
-public class ReverseArray {
+public class RandomID {
 
     public static void main(String[] args) {
 
-        String[] pallets = {"A35","B99","A12","B23"};
+        Random rand = new Random();
+
+        String[] orderIDs = new String[10];
 
 
 
-        System.out.println("Sorted Array: ");
+        for (int i = 0; i < orderIDs.length; i++) {
 
-        Arrays.sort(pallets);
+            char prefix = (char)(rand.nextInt(5) + 'A');
 
-        for (String pallet : pallets){
 
-            System.out.println("--" + pallet);
+
+            int number = rand.nextInt(999) + 1;
+
+            String suffix = String.format("%03d", number);
+
+
+
+            orderIDs[i] = prefix + suffix;
 
         }
 
 
 
-        System.out.println("\nSorted Reverse: ");
+        for (String orderID : orderIDs) {
 
-        List<String> palletList = Arrays.asList(pallets);
-
-        Collections.reverse(palletList);
-
-        for (String pallet : palletList){
-
-            System.out.println("--" + pallet);
+            System.out.println(orderID);
 
         }
 
